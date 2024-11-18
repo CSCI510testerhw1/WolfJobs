@@ -82,19 +82,19 @@ At WolfJobs, it’s not just about work – it's about joining a vibrant pack wh
 
 Applicants will be able to select the skills that they have from the skills database.
 
-![Applicant Login](https://github.com/CSCI510testerhw1/WolfJobs/blob/dev/images/applicant_login.png)
+![Applicant Login](https://github.com/CSCI510testerhw1/WolfJobs/blob/master/images/applicant_login.png)
 
 ## Manager Creates a Job
 
 Managers will also be able to select the skills required for the job from the skills database.
 
-![Create Job](https://github.com/CSCI510testerhw1/WolfJobs/blob/dev/images/create_job.png)
+![Create Job](https://github.com/CSCI510testerhw1/WolfJobs/blob/master/images/create_job.png)
 
 ## Skill Matching Percentage
 
 Applicants are able to view the percentage of how closely the job's required skills align with their skills
 
-![Skill Percentage](https://github.com/CSCI510testerhw1/WolfJobs/blob/dev/images/sort_skill_percentage.png)
+![Skill Percentage](https://github.com/CSCI510testerhw1/WolfJobs/blob/master/images/sort_skill_percentage.png)
 
 ## Filtering & Sorting
 
@@ -102,25 +102,25 @@ Applicants are able to view the percentage of how closely the job's required ski
 
 Users can filter job listings based on the affiliation
 
-![Filter by Affiliation](https://github.com/CSCI510testerhw1/WolfJobs/blob/dev/images/filter_affiliation.png)
+![Filter by Affiliation](https://github.com/CSCI510testerhw1/WolfJobs/blob/master/images/filter_affiliation.png)
 
 ### Filter by Skills
 
 Users can filter job listings based on the skills required. In this example, only one job shows up because it's be filtered by "leadership"
 
-![Filter by Skills](https://github.com/CSCI510testerhw1/WolfJobs/blob/dev/images/filter_skills.png)
+![Filter by Skills](https://github.com/CSCI510testerhw1/WolfJobs/blob/master/images/filter_skills.png)
 
 ### Sort by Skill Matching Percentage
 
 Applicants can sort job listings based on the percentage of how closely the job's required skills align with their skills
 
-![Sort Skill Percentage](https://github.com/CSCI510testerhw1/WolfJobs/blob/dev/images/sort_skill_percentage.png)
+![Sort Skill Percentage](https://github.com/CSCI510testerhw1/WolfJobs/blob/master/images/sort_skill_percentage.png)
 
 ## Support for Multiple Applicants Per Job
 
 Multiple applicants may apply for the same job
 
-![Multiple Applicants](https://github.com/CSCI510testerhw1/WolfJobs/blob/dev/images/mutiple_applicants.png)
+![Multiple Applicants](https://github.com/CSCI510testerhw1/WolfJobs/blob/master/images/mutiple_applicants.png)
 
 ## Support for Unique Resumes
 
@@ -128,11 +128,11 @@ Applicants may upload a different resume for each job that they apply to
 
 ### Resume 1
 
-![Unique Resume 1](https://github.com/CSCI510testerhw1/WolfJobs/blob/dev/images/resume1.png)
+![Unique Resume 1](https://github.com/CSCI510testerhw1/WolfJobs/blob/master/images/resume1.png)
 
 ### Resume 2
 
-![Unique Resume 2](https://github.com/CSCI510testerhw1/WolfJobs/blob/dev/images/resume2.png)
+![Unique Resume 2](https://github.com/CSCI510testerhw1/WolfJobs/blob/master/images/resume2.png)
 
 # Future Improvements✨
 
