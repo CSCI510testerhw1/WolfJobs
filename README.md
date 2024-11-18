@@ -1,19 +1,22 @@
-![Banner](https://github.com/hsalway1/WolfJobs/blob/master/GIFs/Banner.png)
-
+![Banner](https://github.com/CSCI510testerhw1/WolfJobs/blob/master/GIFs/Banner.png)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://gitHub.com//CSCI510testerhw1/WolfJobs/graphs/commit-activity) 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![npm-build](https://github.com/hsalway1/WolfJobs/actions/workflows/build-test-upload.yml/badge.svg)](https://github.com/hsalway1/WolfJobs/actions/workflows/build-test-upload.yml)
-[![eslint_check](https://github.com/hsalway1/WolfJobs/actions/workflows/check_lint.yml/badge.svg)](https://github.com/hsalway1/WolfJobs/actions/workflows/check_lint.yml)
+[![npm-build](https://github.com/CSCI510testerhw1/WolfJobs/actions/workflows/build-test-upload.yml/badge.svg)](https://github.com/CSCI510testerhw1/WolfJobs/actions/workflows/build-test-upload.yml)
+[![eslint_check](https://github.com/CSCI510testerhw1/WolfJobs/actions/workflows/check_lint.yml/badge.svg)](https://github.com/CSCI510testerhw1/WolfJobs/actions/workflows/check_lint.yml)
 [![code style: eslint](https://img.shields.io/badge/code%20style-eslint-brightgreen.svg)](https://eslint.org/)
-[![Open Issues](https://img.shields.io/github/issues/hsalway1/wolfjobs)](https://github.com/hsalway1/WolfJobs/issues)
-[![Closed Issues](https://img.shields.io/github/issues-closed/hsalway1/wolfjobs)](https://github.com/hsalway1/WolfJobs/issues?q=is%3Aissue+is%3Aclosed)
-![last commit](https://img.shields.io/github/last-commit/hsalway1/Wolfjobs)
-![Lines of code](https://tokei.rs/b1/github/hsalway1/wolfjobs)
-[![Lines of Code](https://img.shields.io/github/languages/code-size/hsalway1/WolfJobs)](https://github.com/hsalway1/WolfJobs) 
-[![Repo Size](https://img.shields.io/github/repo-size/hsalway1/WolfJobs)](https://github.com/hsalway1/WolfJobs) 
-[![File Count](https://img.shields.io/github/directory-file-count/hsalway1/WolfJobs)](https://github.com/hsalway1/WolfJobs) 
-[![Language Count](https://img.shields.io/github/languages/count/hsalway1/WolfJobs)](https://github.com/hsalway1/WolfJobs)
-[![Top Language](https://img.shields.io/github/languages/top/hsalway1/WolfJobs)](https://github.com/hsalway1/WolfJobs)
+[![GitHub issues](https://img.shields.io/github/issues/CSCI510testerhw1/WolfJobs.svg)](https://github.com/CSCI510testerhw1/WolfJobs/issues?q=is%3Aopen+is%3Aissue) 
+[![GitHub issues-closed](https://img.shields.io/github/issues-closed/CSCI510testerhw1/WolfJobs.svg)](https://github.com/CSCI510testerhw1/WolfJobs/issues?q=is%3Aissue+is%3Aclosed)
+![last commit](https://img.shields.io/github/last-commit/CSCI510testerhw1/Wolfjobs)
+[![Lines of Code](https://img.shields.io/github/languages/code-size/CSCI510testerhw1/WolfJobs)](https://github.com/CSCI510testerhw1/WolfJobs) 
+[![Repo Size](https://img.shields.io/github/repo-size/CSCI510testerhw1/WolfJobs)](https://github.com/CSCI510testerhw1/WolfJobs) 
+[![File Count](https://img.shields.io/github/directory-file-count/CSCI510testerhw1/WolfJobs)](https://github.com/CSCI510testerhw1/WolfJobs) 
+[![Language Count](https://img.shields.io/github/languages/count/CSCI510testerhw1/WolfJobs)](https://github.com/CSCI510testerhw1/WolfJobs)
+[![Top Language](https://img.shields.io/github/languages/top/CSCI510testerhw1/WolfJobs)](https://github.com/CSCI510testerhw1/WolfJobs)
 [![DOI](https://zenodo.org/badge/866310682.svg)](https://doi.org/10.5281/zenodo.14029522)
+[![HitCount](https://hits.dwyl.com/CSCI510testerhw1/PopcornPicks.svg)](https://hits.dwyl.com/CSCI510testerhw1/PopcornPicks) 
+![GitHub contributors](https://img.shields.io/github/contributors/CSCI510testerhw1/PopcornPicks) 
+![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/CSCI510testerhw1/WolfJobs) 
+![GitHub repo size](https://img.shields.io/github/repo-size/CSCI510testerhw1/WolfJobs)
 
 <!-- ![Static Badge](https://img.shields.io/badge/any_text-i_like-blue) -->
 
@@ -50,7 +53,7 @@
 
 # Presentation Video
 
-[![Watch the video](https://github.com/hsalway1/WolfJobs/blob/master/GIFs/Thumbnail.png)](https://www.youtube.com/watch?v=EdFIcG3eckE)
+[![Watch the video](https://github.com/CSCI510testerhw1/WolfJobs/blob/master/GIFs/Thumbnail.png)](https://www.youtube.com/watch?v=EdFIcG3eckE)
 
 # About Us
 
@@ -70,7 +73,7 @@ At WolfJobs, it’s not just about work – it's about joining a vibrant pack wh
 
 - **Inclusivity & Belonging:** At WolfJobs, every student is a valuable asset. Our emphasis on inclusion ensures that you're not just taking up a job; you're becoming a part of a diverse, dynamic community where your voice matters.
 
-[![Watch the video](https://github.com/hsalway1/WolfJobs/blob/master/GIFs/VideoThumbail.jpg)](https://youtu.be/GGMzBGfx_0E)
+[![Watch the video](https://github.com/CSCI510testerhw1/WolfJobs/blob/master/GIFs/VideoThumbail.jpg)](https://youtu.be/GGMzBGfx_0E)
 
 # Application Preview With New Features:
 
@@ -78,19 +81,19 @@ At WolfJobs, it’s not just about work – it's about joining a vibrant pack wh
 
 Applicants will be able to select the skills that they have from the skills database.
 
-![Applicant Login](https://github.com/hsalway1/WolfJobs/blob/dev/images/applicant_login.png)
+![Applicant Login](https://github.com/CSCI510testerhw1/WolfJobs/blob/dev/images/applicant_login.png)
 
 ## Manager Creates a Job
 
 Managers will also be able to select the skills required for the job from the skills database.
 
-![Create Job](https://github.com/hsalway1/WolfJobs/blob/dev/images/create_job.png)
+![Create Job](https://github.com/CSCI510testerhw1/WolfJobs/blob/dev/images/create_job.png)
 
 ## Skill Matching Percentage
 
 Applicants are able to view the percentage of how closely the job's required skills align with their skills
 
-![Skill Percentage](https://github.com/hsalway1/WolfJobs/blob/dev/images/sort_skill_percentage.png)
+![Skill Percentage](https://github.com/CSCI510testerhw1/WolfJobs/blob/dev/images/sort_skill_percentage.png)
 
 ## Filtering & Sorting
 
@@ -98,25 +101,25 @@ Applicants are able to view the percentage of how closely the job's required ski
 
 Users can filter job listings based on the affiliation
 
-![Filter by Affiliation](https://github.com/hsalway1/WolfJobs/blob/dev/images/filter_affiliation.png)
+![Filter by Affiliation](https://github.com/CSCI510testerhw1/WolfJobs/blob/dev/images/filter_affiliation.png)
 
 ### Filter by Skills
 
 Users can filter job listings based on the skills required. In this example, only one job shows up because it's be filtered by "leadership"
 
-![Filter by Skills](https://github.com/hsalway1/WolfJobs/blob/dev/images/filter_skills.png)
+![Filter by Skills](https://github.com/CSCI510testerhw1/WolfJobs/blob/dev/images/filter_skills.png)
 
 ### Sort by Skill Matching Percentage
 
 Applicants can sort job listings based on the percentage of how closely the job's required skills align with their skills
 
-![Sort Skill Percentage](https://github.com/hsalway1/WolfJobs/blob/dev/images/sort_skill_percentage.png)
+![Sort Skill Percentage](https://github.com/CSCI510testerhw1/WolfJobs/blob/dev/images/sort_skill_percentage.png)
 
 ## Support for Multiple Applicants Per Job
 
 Multiple applicants may apply for the same job
 
-![Multiple Applicants](https://github.com/hsalway1/WolfJobs/blob/dev/images/mutiple_applicants.png)
+![Multiple Applicants](https://github.com/CSCI510testerhw1/WolfJobs/blob/dev/images/mutiple_applicants.png)
 
 ## Support for Unique Resumes
 
@@ -124,11 +127,11 @@ Applicants may upload a different resume for each job that they apply to
 
 ### Resume 1
 
-![Unique Resume 1](https://github.com/hsalway1/WolfJobs/blob/dev/images/resume1.png)
+![Unique Resume 1](https://github.com/CSCI510testerhw1/WolfJobs/blob/dev/images/resume1.png)
 
 ### Resume 2
 
-![Unique Resume 2](https://github.com/hsalway1/WolfJobs/blob/dev/images/resume2.png)
+![Unique Resume 2](https://github.com/CSCI510testerhw1/WolfJobs/blob/dev/images/resume2.png)
 
 # Future Improvements✨
 
@@ -179,5 +182,14 @@ Applicants may upload a different resume for each job that they apply to
     <td align="center"><a href="https://github.com/vuvuong003"><img src="https://avatars.githubusercontent.com/vuvuong003" width="100px;" alt=""/><br /><b>Vu Vuong</b></a></td>
     <td align="center"><a href="https://github.com/Rohan0212"><img src="https://avatars.githubusercontent.com/Rohan0212" width="100px;" alt=""/><br /><b>Rohan Khandare</b></a><br /></td>
     <td align="center"><a href="https://github.com/hsalway1"><img src="https://avatars.githubusercontent.com/hsalway1" width="100px;" alt=""/><br /><b>Hrishikesh Salway</b></a><br /></td>
+  </tr>
+</table>
+
+## Iteration 4:
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/JTrep10"><img src="https://avatars.githubusercontent.com/JTrep10" width="100px;" alt=""/><br /><b>Vu Vuong</b></a></td>
+    <td align="center"><a href="https://github.com/anirudhkaluri"><img src="https://avatars.githubusercontent.com/anirudhkaluri" width="100px;" alt=""/><br /><b>Rohan Khandare</b></a><br /></td>
+    <td align="center"><a href="https://github.com/mulesiddhi"><img src="https://avatars.githubusercontent.com/mulesiddhi" width="100px;" alt=""/><br /><b>Hrishikesh Salway</b></a><br /></td>
   </tr>
 </table>
