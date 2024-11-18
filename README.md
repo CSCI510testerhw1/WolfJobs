@@ -7,6 +7,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/CSCI510testerhw1/WolfJobs.svg)](https://github.com/CSCI510testerhw1/WolfJobs/issues?q=is%3Aopen+is%3Aissue) 
 [![GitHub issues-closed](https://img.shields.io/github/issues-closed/CSCI510testerhw1/WolfJobs.svg)](https://github.com/CSCI510testerhw1/WolfJobs/issues?q=is%3Aissue+is%3Aclosed)
 ![last commit](https://img.shields.io/github/last-commit/CSCI510testerhw1/Wolfjobs)
+[![Contributors Activity](https://img.shields.io/github/commit-activity/m/CSCI510testerhw1/WolfJobs)](https://github.com/CSCI510testerhw1/WolfJobs/pulse) 
 [![Lines of Code](https://img.shields.io/github/languages/code-size/CSCI510testerhw1/WolfJobs)](https://github.com/CSCI510testerhw1/WolfJobs) 
 [![Repo Size](https://img.shields.io/github/repo-size/CSCI510testerhw1/WolfJobs)](https://github.com/CSCI510testerhw1/WolfJobs) 
 [![File Count](https://img.shields.io/github/directory-file-count/CSCI510testerhw1/WolfJobs)](https://github.com/CSCI510testerhw1/WolfJobs) 
@@ -188,8 +189,8 @@ Applicants may upload a different resume for each job that they apply to
 ## Iteration 4:
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/JTrep10"><img src="https://avatars.githubusercontent.com/JTrep10" width="100px;" alt=""/><br /><b>Vu Vuong</b></a></td>
-    <td align="center"><a href="https://github.com/anirudhkaluri"><img src="https://avatars.githubusercontent.com/anirudhkaluri" width="100px;" alt=""/><br /><b>Rohan Khandare</b></a><br /></td>
-    <td align="center"><a href="https://github.com/mulesiddhi"><img src="https://avatars.githubusercontent.com/mulesiddhi" width="100px;" alt=""/><br /><b>Hrishikesh Salway</b></a><br /></td>
+    <td align="center"><a href="https://github.com/JTrep10"><img src="https://avatars.githubusercontent.com/JTrep10" width="100px;" alt=""/><br /><b>Jonas Trepanier</b></a></td>
+    <td align="center"><a href="https://github.com/anirudhkaluri"><img src="https://avatars.githubusercontent.com/anirudhkaluri" width="100px;" alt=""/><br /><b>Anirudh Kaluri</b></a><br /></td>
+    <td align="center"><a href="https://github.com/mulesiddhi"><img src="https://avatars.githubusercontent.com/mulesiddhi" width="100px;" alt=""/><br /><b>Siddhi Mule</b></a><br /></td>
   </tr>
 </table>
