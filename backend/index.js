@@ -21,6 +21,7 @@ const passportJWT = require("./config/passport-jwt-strategy");
 app.use(cors());
 
 app.use(express.urlencoded());
+app.use(express.json());
 
 app.use(cookieParser());
 
