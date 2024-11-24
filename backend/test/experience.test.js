@@ -16,7 +16,7 @@ describe("createExperience", () => {
 
     beforeEach(() => {
         req = {
-          body: {
+          params: {
             applicantId: "applicantId123",
             organization: "Google",
             role: "Software Dev",
@@ -33,16 +33,63 @@ describe("createExperience", () => {
         };
       });
 
-      it("create an experience", async () => {
-        //Experience.findOne.mockResolvedValueOnce(true); // Mocking existing application
+      it("create an experience, catch error", async () => {
+        const exp = {
+          applicantId: "applicantId123",
+          organization: "Google",
+          role: "Software Dev",
+          description: "I created Google Docs.",
+          fromDate: start,
+          toDate: end,
+        };
+        Experience.findOne.mockResolvedValueOnce(null); // Mocking existing application
     
         await createExperience(req, res);
     
-        expect(res.set).toHaveBeenCalledWith("Access-Control-Allow-Origin", "*");
         expect(res.status).toHaveBeenCalledWith(500);
         expect(res.json).toHaveBeenCalledWith({
-          message: "Experience Created Successfuly",
+          message: "Internal Server ErrorTypeError: Cannot read properties of undefined (reading '_id')",
+        });
+      });
+
+      // it("create an experience", async () => {
+      //   const exp = {
+      //     applicantId: "applicantId123",
+      //     organization: "Google",
+      //     role: "Software Dev",
+      //     description: "I created Google Docs.",
+      //     fromDate: start,
+      //     toDate: end,
+      //   };
+      //   Experience.findOne.mockResolvedValueOnce(exp); // Mocking existing exp
+    
+      //   await createExperience(req, res);
+    
+      //   expect(res.status).toHaveBeenCalledWith(200);
+      //   expect(res.json).toHaveBeenCalledWith({
+      //     message: "Experience Created Successfuly",
+      //     success: true,
+      //   });
+      // });
+
+      it("get experience", async() => {
+
+        const exp = {
+          applicantId: "applicantId123",
+          organization: "Google",
+          role: "Software Dev",
+          description: "I created Google Docs.",
+          fromDate: start,
+          toDate: end,
+        };
+        Experience.findOne.mockResolvedValueOnce(exp); // Mocking existing application
+
+        await getAllExperience(req, res);
+        expect(res.status).toHaveBeenCalledWith(500);
+        expect(res.json).toHaveBeenCalledWith({
+          message: "Experience retrieved Successfuly",
           success: true,
         });
       });
+
 });

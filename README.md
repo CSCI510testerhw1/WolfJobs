@@ -17,7 +17,6 @@
 [![HitCount](https://hits.dwyl.com/CSCI510testerhw1/PopcornPicks.svg)](https://hits.dwyl.com/CSCI510testerhw1/PopcornPicks) 
 ![GitHub contributors](https://img.shields.io/github/contributors/CSCI510testerhw1/PopcornPicks) 
 ![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/CSCI510testerhw1/WolfJobs) 
-![GitHub repo size](https://img.shields.io/github/repo-size/CSCI510testerhw1/WolfJobs)
 
 <!-- ![Static Badge](https://img.shields.io/badge/any_text-i_like-blue) -->
 
