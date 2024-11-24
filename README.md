@@ -16,7 +16,8 @@
 [![DOI](https://zenodo.org/badge/866310682.svg)](https://doi.org/10.5281/zenodo.14029522)
 [![HitCount](https://hits.dwyl.com/CSCI510testerhw1/PopcornPicks.svg)](https://hits.dwyl.com/CSCI510testerhw1/PopcornPicks) 
 ![GitHub contributors](https://img.shields.io/github/contributors/CSCI510testerhw1/PopcornPicks) 
-![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/CSCI510testerhw1/WolfJobs) 
+![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/CSCI510testerhw1/WolfJobs)
+[![codecov](https://codecov.io/gh/CSCI510testerhw1/WolfJobs/graph/badge.svg?token=49BL2NFTCZ)](https://codecov.io/gh/CSCI510testerhw1/WolfJobs)
 
 <!-- ![Static Badge](https://img.shields.io/badge/any_text-i_like-blue) -->
 
