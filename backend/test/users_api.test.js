@@ -1,8 +1,12 @@
 const { createApplication } = require("../controllers/api/v1/users_api"); // Update with your actual path
 const Application = require("../models/application"); // Update with your actual path
+const Education = require("../models/education");
+const Experience = require("../models/experience");
 const User = require("../models/user"); // Update with your actual path
 
 jest.mock("../models/application");
+jest.mock("../models/education");
+jest.mock("../models/experience");
 jest.mock("../models/user");
 
 describe("createApplication", () => {
