@@ -39,6 +39,12 @@ jobs:
         working-directory: ./frontend
         run: |
           npm run coverage
+      
+      - name: Run backend tests
+        working-directory: ./backend
+        run: |
+          npm run jesttest
+
 
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
