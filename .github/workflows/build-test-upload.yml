@@ -62,3 +62,9 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           path: /frontend/coverage
+
+      - name: Upload backend coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          path: /backend/coverage
