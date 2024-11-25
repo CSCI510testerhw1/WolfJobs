@@ -17,4 +17,7 @@ router.get("/get-all-education/:applicantId",profileApi.getAllEducation);
 router.delete("/delete-education/:educationId",profileApi.deleteEducation);
 router.put("/modify-education",profileApi.modifyEducation);
 
+//recommendation
+router.get("/get-recommendation/:applicantId",profileApi.recommendCareer);
+
 module.exports=router;
