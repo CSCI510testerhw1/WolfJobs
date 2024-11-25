@@ -14,5 +14,8 @@
     "format:backend": "cd backend && npm run format",
     "lint": "npm run lint:frontend && npm run lint:backend",
     "format": "npm run format:frontend && npm run format:backend"
+  },
+  "dependencies": {
+    "supertest": "^7.0.0"
   }
 }
