@@ -1,5 +1,7 @@
 import { AiOutlineClose } from "react-icons/ai";
 import { BiSolidPencil } from "react-icons/bi";
+import EducationSection from '../../components/EducationSection';
+import ExperienceSection from '../../components/ExperienceSection';
 import ProfileEdit from "./ProfileEdit";
 import { useState } from "react";
 import { useUserStore } from "../../store/UserStore";
@@ -104,6 +106,12 @@ const Profile = () => {
                     )}
                   </div>
                 </div>
+
+                {/* Experience Section */}
+                <ExperienceSection />
+
+                {/* Education Section */}
+                <EducationSection />
 
                 <div className="bg-white rounded-lg">
                   <h2 className="text-lg font-semibold mb-3">
