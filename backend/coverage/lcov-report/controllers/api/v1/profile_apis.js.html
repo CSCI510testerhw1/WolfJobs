@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">29.06% </span>
+                <span class="strong">35.22% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>25/86</span>
+                <span class='fraction'>31/88</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">11.11% </span>
+                <span class="strong">22.22% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/9</span>
+                <span class='fraction'>2/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">29.06% </span>
+                <span class="strong">35.22% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>25/86</span>
+                <span class='fraction'>31/88</span>
             </div>
         
             
@@ -340,7 +340,9 @@
 <a name='L275'></a><a href='#L275'>275</a>
 <a name='L276'></a><a href='#L276'>276</a>
 <a name='L277'></a><a href='#L277'>277</a>
-<a name='L278'></a><a href='#L278'>278</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L278'></a><a href='#L278'>278</a>
+<a name='L279'></a><a href='#L279'>279</a>
+<a name='L280'></a><a href='#L280'>280</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -378,22 +380,24 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -654,12 +658,14 @@ module.exports.createExperience=async function(req,res){
     }
 };
 &nbsp;
-module.exports.getAllExperience=<span class="fstat-no" title="function not covered" >as</span>ync function(req,res){
-<span class="cstat-no" title="statement not covered" >    try{</span>
+module.exports.getAllExperience=async function(req,res){
+    try{
 &nbsp;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        res.set("Access-Control-Allow-Origin", "*"); </span>
-        const result=<span class="cstat-no" title="statement not covered" >await Experience.find({applicantId:req.params.applicantId}).sort({fromDate:-1});</span>
+        res.set("Access-Control-Allow-Origin", "*"); 
+        var testresult=await Experience.find({applicantId:req.params.applicantId});
+        console.log(testresult.sort());
+        const result=await Experience.find({applicantId:req.params.applicantId}).sort({fromDate:-1});
 &nbsp;
 <span class="cstat-no" title="statement not covered" >        return res.status(200).json({</span>
             message: "Experience retrieved Successfuly",
@@ -670,7 +676,7 @@ module.exports.getAllExperience=<span class="fstat-no" title="function not cover
           });
     }
     catch(err){
-<span class="cstat-no" title="statement not covered" >        return res.status(500).json({</span>
+        return res.status(500).json({
             message: "Internal Server Error"+err,
           });
     }
@@ -901,7 +907,7 @@ module.exports.recommendCareer=<span class="fstat-no" title="function not covere
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-11-25T15:40:20.385Z
+                at 2024-11-25T16:48:47.224Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
