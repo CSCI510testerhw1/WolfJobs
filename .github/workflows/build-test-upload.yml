@@ -39,7 +39,11 @@ jobs:
         working-directory: ./frontend
         run: |
           npm run coverage
-      
+
+      - name: Install Backend
+        working-directory: ./backend
+        run: |
+          npm i
       - name: Run backend tests
         working-directory: ./backend
         run: |
