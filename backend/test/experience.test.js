@@ -85,26 +85,29 @@ describe('POST /createExperience', () => {
     // Mocking the result of the Experience.find() method
     const mockExperiences = [
       {
-        _id: '60d0fe4f5311236168a109f9',
-        applicantId: '60d0fe4f5311236168a109f8',
-        title: 'Software Engineer',
-        company: 'Example Corp',
-        fromDate: new Date('2022-01-01'),
-        toDate: new Date('2023-01-01'),
+        _id: "60d7b124fa8b6d1e4b1e2e29",
+        applicantId: "60d7b122fa8b6d1e4b1e2e28",
+        organization: "Company XYZ",
+        role: "Software Engineer",
+        description: "Developing web applications",
+        fromDate: new Date('2020-01-01'),
+        toDate: new Date('2022-01-01')
       },
       {
-        _id: '60d0fe4f5311236168a109fa',
-        applicantId: '60d0fe4f5311236168a109f8',
-        title: 'Junior Developer',
-        company: 'Tech Startup',
-        fromDate: new Date('2020-01-01'),
-        toDate: new Date('2021-01-01'),
+        _id: "60d7b124fa8b6d1e4b1e2e30",
+        applicantId: "60d7b122fa8b6d1e4b1e2e28",
+        organization: "Company ABC",
+        role: "Junior Developer",
+        description: "Assisting with software development",
+        fromDate: new Date('2018-01-01'),
+        toDate: new Date('2020-01-01')
       }
     ];
 
     // Mock the Experience.find() function to return the mock experiences
     Experience.find.mockResolvedValue(mockExperiences);
-    // mockingoose(Experience).toReturn(mockExperiences, 'find');
+
+    // Experience.sort.mockResolvedValue(mockExperiences.sort());
 
     const reqBody = { params: {applicantId: '60d0fe4f5311236168a109f7'}};
 
