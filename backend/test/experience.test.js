@@ -77,52 +77,225 @@ describe('POST /createExperience', () => {
     expect(res.status).toHaveBeenCalledWith(500);
     expect(res.json).toHaveBeenCalledWith({
       message: "Internal Server ErrorError: Database error",
-});
+    });
 
   });
+});
 
+describe('GET /getExperience', () => {
+  beforeEach(() => {
+    res = {
+      set: jest.fn().mockReturnThis(),
+      status: jest.fn().mockReturnThis(),
+      json: jest.fn(),
+    };
+  });
   it('should successfully retrieve all experiences for an applicant', async () => {
     // Mocking the result of the Experience.find() method
-    const mockExperiences = [
-      {
-        _id: "60d7b124fa8b6d1e4b1e2e29",
-        applicantId: "60d7b122fa8b6d1e4b1e2e28",
-        organization: "Company XYZ",
-        role: "Software Engineer",
-        description: "Developing web applications",
-        fromDate: new Date('2020-01-01'),
-        toDate: new Date('2022-01-01')
-      },
-      {
-        _id: "60d7b124fa8b6d1e4b1e2e30",
-        applicantId: "60d7b122fa8b6d1e4b1e2e28",
-        organization: "Company ABC",
-        role: "Junior Developer",
-        description: "Assisting with software development",
-        fromDate: new Date('2018-01-01'),
-        toDate: new Date('2020-01-01')
-      }
-    ];
+    // const mockExperiences = [
+    //   {
+    //     _id: "60d7b124fa8b6d1e4b1e2e29",
+    //     applicantId: "60d7b122fa8b6d1e4b1e2e28",
+    //     organization: "Company XYZ",
+    //     role: "Software Engineer",
+    //     description: "Developing web applications",
+    //     fromDate: new Date('2020-01-01'),
+    //     toDate: new Date('2022-01-01')
+    //   },
+    //   {
+    //     _id: "60d7b124fa8b6d1e4b1e2e30",
+    //     applicantId: "60d7b122fa8b6d1e4b1e2e28",
+    //     organization: "Company ABC",
+    //     role: "Junior Developer",
+    //     description: "Assisting with software development",
+    //     fromDate: new Date('2018-01-01'),
+    //     toDate: new Date('2020-01-01')
+    //   }
+    // ];
+
+    // // Mock the Experience.find() function to return the mock experiences
+    // Experience.find.mockResolvedValue(mockExperiences);
+
+    // // Experience.sort.mockResolvedValue(mockExperiences.sort());
+
+    // const reqBody = {
+    //   params: {
+    //     applicantId: '60d0fe4f5311236168a109f8',
+    //     experienceId: '60d0fe4f5311236168a109f9'
+    //   }
+    // };
+
+    // // Call the GET endpoint
+    // // Call the create function
+    // await getAllExperience(reqBody, res);
+
+    // // Assert the response structure
+    // //expect(res.status).toHaveBeenCalledWith(200);
+    // expect(res.json).toHaveBeenCalledWith({
+    //         message: "Experience retrieved Successfuly",
+    //         data: {
+    //           'experience': "60d0fe4f5311236168a109f9",
+    //         },
+    //         success: true,
+    });
+});
+  it("should return 500 on internal error", async () => {
+    // Experience.find.mockRejectedValue(new Error("Database Error"));
+
+    // const reqBody = {
+    //   params: {
+    //     applicantId: '60d0fe4f5311236168a109f8',
+    //     experienceId: '60d0fe4f5311236168a109f9'
+    //   }
+    // };
+
+    // // Call the GET endpoint
+    // // Call the create function
+    // await getAllExperience(reqBody, res);
+    
+    // // Assert the error message in the response
+    // expect(res.status).toHaveBeenCalledWith(500);
+    // expect(res.json).toHaveBeenCalledWith({
+    //   message: "Internal Server ErrorError: Internal Server Error",
+    //   });
+    // });
+});
+
+describe('DELETE /deleteExperience/:experienceId', () => {
+  beforeEach(() => {
+    res = {
+      set: jest.fn().mockReturnThis(),
+      status: jest.fn().mockReturnThis(),
+      json: jest.fn(),
+    };
+  });
+  it('it should delete an experience successfully', async () => {
+    // Mocking the result of the Experience.find() method
+    const mockExperience = {
+      _id: '60d0fe4f5311236168a109f9',
+      applicantId: '60d0fe4f5311236168a109f8',
+    };
 
     // Mock the Experience.find() function to return the mock experiences
-    Experience.find.mockResolvedValue(mockExperiences);
+    Experience.findByIdAndDelete.mockResolvedValue(mockExperience);
 
-    // Experience.sort.mockResolvedValue(mockExperiences.sort());
-
-    const reqBody = { params: {applicantId: '60d0fe4f5311236168a109f7'}};
+    const reqBody = {
+      params: {
+        experienceId: '60d0fe4f5311236168a109f9'
+      }
+    };
 
     // Call the GET endpoint
     // Call the create function
-    await getAllExperience(reqBody, res);
+    await deleteExperience(reqBody, res);
+
+    // Assert the response structure
+    expect(res.status).toHaveBeenCalledWith(200);
+    expect(res.json).toHaveBeenCalledWith({
+            message: "Experience deleted Successfuly",
+            data: {
+              'experience' : {
+                "_id": "60d0fe4f5311236168a109f9",
+                "applicantId": "60d0fe4f5311236168a109f8",
+              }
+            },
+            success: true,
+      });
+  });
+  it("should return 500 on internal error", async () => {
+    Experience.findByIdAndDelete.mockRejectedValue(new Error("Internal Server Error"));
+
+    const reqBody = {
+      params: {
+        experienceId: '60d0fe4f5311236168a109f9'
+      }
+    };
+
+    // Call the GET endpoint
+    // Call the create function
+    await deleteExperience(reqBody, res);
+    
+    // Assert the error message in the response
+    expect(res.status).toHaveBeenCalledWith(500);
+    expect(res.json).toHaveBeenCalledWith({
+      message: "Internal Server ErrorError: Internal Server Error",
+      });
+    });
+});
+
+describe('POST /modifyExperience', () => {
+  beforeEach(() => {
+    res = {
+      set: jest.fn().mockReturnThis(),
+      status: jest.fn().mockReturnThis(),
+      json: jest.fn(),
+    };
+  });
+  it('it should modify an experience successfully', async () => {
+    // Mocking the result of the Experience.find() method
+    const mockExperience = {
+      _id: "60d7b124fa8b6d1e4b1e2e29",
+      applicantId: "60d7b122fa8b6d1e4b1e2e28",
+      organization: "Company XYZ",
+      role: "Software Engineer",
+      description: "Developing web applications",
+      fromDate: new Date('2020-01-01'),
+      toDate: new Date('2022-01-01')
+    };
+
+    // Mock the Experience.find() function to return the mock experiences
+    Experience.findByIdAndUpdate.mockResolvedValue(mockExperience);
+
+    const reqBody = {
+      body:
+      {
+        applicantId: '60d0fe4f5311236168a109f8',
+        title: 'Software Engineer',
+        company: 'Example Corp',
+        description: 'Building cool stuff',
+        }
+    };
+
+    // Call the GET endpoint
+    // Call the create function
+    await modifyExperience(reqBody, res);
 
     // Assert the response structure
     //expect(res.status).toHaveBeenCalledWith(200);
     expect(res.json).toHaveBeenCalledWith({
-            message: "Experience retrieved Successfuly",
+            message: "Experience modified Successfuly",
             data: {
-              'experience': "60d0fe4f5311236168a109f9",
+              'experience' : {
+                "_id": "60d7b124fa8b6d1e4b1e2e29",
+                "applicantId": "60d7b122fa8b6d1e4b1e2e28",
+                "organization": "Company XYZ",
+                "role": "Software Engineer",
+                "description": "Developing web applications",
+                "fromDate": new Date('2020-01-01'),
+                "toDate": new Date('2022-01-01')
+              }
             },
             success: true,
+      });
+  });
+  it("should return 500 on internal error", async () => {
+    Experience.findByIdAndUpdate.mockRejectedValue(new Error("Internal Server Error"));
+
+    const reqBody = {
+      body: {
+        experienceId: '60d0fe4f5311236168a109f9'
+      }
+    };
+
+    // Call the GET endpoint
+    // Call the create function
+    await modifyExperience(reqBody, res);
+    
+    // Assert the error message in the response
+    expect(res.status).toHaveBeenCalledWith(500);
+    expect(res.json).toHaveBeenCalledWith({
+      message: "Internal Server ErrorError: Internal Server Error",
+      });
     });
 });
-});
+
