@@ -9,13 +9,14 @@ import {
   Stack,
   TextField,
 } from "@mui/material";
-import axios from "axios";
 import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
-import { toast } from "react-toastify";
-import { useUserStore } from "../../store/UserStore";
-import { useNavigate } from "react-router-dom";
+
+import axios from "axios";
 import { login } from "../../deprecateded/auth";
+import { toast } from "react-toastify";
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import { useUserStore } from "../../store/UserStore";
 
 type FormValues = {
   name: string;
@@ -58,7 +59,7 @@ const ProfileEdit = ({ props }: { props: any }) => {
   });
 
   const [availabilityDrop, setAvailabilityDtop] = useState(availability);
-  const [skillsDB, setSkillsDB] = useState<string[]>([]); // For fetched skills
+  const [skillsDB, setSkillsDB] = useState<string[]>([]);
 
   const userId = useUserStore((state) => state.id);
   const password = useUserStore((state) => state.password);
@@ -93,21 +94,20 @@ const ProfileEdit = ({ props }: { props: any }) => {
       login(email, password, navigate);
     });
   };
-  
-  // Fetch skills from backend
+
   useEffect(() => {
     const fetchSkills = async () => {
       try {
-        const response = await fetch("http://localhost:8000/api/v1/users/skills");
+        const response = await fetch(
+          "http://localhost:8000/api/v1/users/skills"
+        );
         if (!response.ok) {
           throw new Error(`Error ${response.status}: ${response.statusText}`);
         }
         const data = await response.json();
-        console.log("Fetched skills:", data);
         setSkillsDB(data);
       } catch (error) {
         console.error("Error fetching skills:", error);
-        // Optionally set a fallback or show error message
         setSkillsDB([]);
       }
     };
@@ -115,83 +115,89 @@ const ProfileEdit = ({ props }: { props: any }) => {
   }, []);
 
   return (
-    <>
-      <div className="my-2">
-        <form onSubmit={handleSubmit(handleSaveProfile)} noValidate>
-          <Stack spacing={2} width={"620px"}>
+    <div className="my-2">
+      <form onSubmit={handleSubmit(handleSaveProfile)} noValidate>
+        <Stack spacing={3} width={"100%"}>
+          <div className="space-y-4">
+            <h2 className="text-lg font-semibold">Basic Information</h2>
             <TextField
               label="Name"
               type="text"
+              fullWidth
               {...register("name", {
                 required: "Name is required",
               })}
               error={!!errors.name}
               helperText={errors.name?.message}
               sx={{
-                "& label": { paddingLeft: (theme) => theme.spacing(1) },
-                "& input": { paddingLeft: (theme) => theme.spacing(2.5) },
-                "& fieldset": {
-                  paddingLeft: (theme) => theme.spacing(1.5),
-                  borderRadius: "10px",
+                "& .MuiOutlinedInput-root": {
+                  borderRadius: "8px",
                 },
               }}
             />
+
             <TextField
               label="Email"
               type="email"
-              {...register("email", {
-                required: "Email is required",
-              })}
-              error={!!errors.email}
-              helperText={errors.email?.message}
-              sx={{
-                "& label": { paddingLeft: (theme) => theme.spacing(1) },
-                "& input": { paddingLeft: (theme) => theme.spacing(2.5) },
-                "& fieldset": {
-                  paddingLeft: (theme) => theme.spacing(1.5),
-                  borderRadius: "10px",
-                },
-              }}
+              fullWidth
+              {...register("email")}
               disabled
               value={email}
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  borderRadius: "8px",
+                },
+              }}
             />
+
             <TextField
               label="Role"
               type="text"
-              {...register("role", {
-                required: "Role is required",
-              })}
-              error={!!errors.role}
-              helperText={errors.role?.message}
-              sx={{
-                "& label": { paddingLeft: (theme) => theme.spacing(1) },
-                "& input": { paddingLeft: (theme) => theme.spacing(2.5) },
-                "& fieldset": {
-                  paddingLeft: (theme) => theme.spacing(1.5),
-                  borderRadius: "10px",
-                },
-              }}
+              fullWidth
+              {...register("role")}
               disabled
               value={role}
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  borderRadius: "8px",
+                },
+              }}
             />
+          </div>
+
+          <div className="space-y-4">
+            <h2 className="text-lg font-semibold">Contact Information</h2>
             <TextField
               label="Address"
               type="text"
+              fullWidth
               {...register("address")}
-              error={!!errors.address}
-              helperText={errors.address?.message}
               sx={{
-                "& label": { paddingLeft: (theme) => theme.spacing(1) },
-                "& input": { paddingLeft: (theme) => theme.spacing(2.5) },
-                "& fieldset": {
-                  paddingLeft: (theme) => theme.spacing(1.5),
-                  borderRadius: "10px",
+                "& .MuiOutlinedInput-root": {
+                  borderRadius: "8px",
                 },
               }}
             />
+
+            <TextField
+              label="Phone number"
+              type="text"
+              fullWidth
+              {...register("phonenumber")}
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  borderRadius: "8px",
+                },
+              }}
+            />
+          </div>
+
+          <div className="space-y-4">
+            <h2 className="text-lg font-semibold">Skills & Availability</h2>
             <Autocomplete
               multiple
               options={skillsDB}
+              defaultValue={skills}
               onChange={(_, value) => setValue("skills", value)}
               renderInput={(params) => (
                 <TextField
@@ -200,67 +206,27 @@ const ProfileEdit = ({ props }: { props: any }) => {
                   error={!!errors.skills}
                   helperText={errors.skills?.message}
                   sx={{
-                    "& label": { paddingLeft: (theme) => theme.spacing(1) },
-                    "& input": { paddingLeft: (theme) => theme.spacing(2.5) },
-                    "& fieldset": {
-                      paddingLeft: (theme) => theme.spacing(1.5),
-                      borderRadius: "10px",
+                    "& .MuiOutlinedInput-root": {
+                      borderRadius: "8px",
                     },
                   }}
                 />
               )}
             />
-            <TextField
-              label="Phone number"
-              type="text"
-              {...register("phonenumber")}
-              error={!!errors.phonenumber}
-              helperText={errors.phonenumber?.message}
-              sx={{
-                "& label": { paddingLeft: (theme) => theme.spacing(1) },
-                "& input": { paddingLeft: (theme) => theme.spacing(2.5) },
-                "& fieldset": {
-                  paddingLeft: (theme) => theme.spacing(1.5),
-                  borderRadius: "10px",
-                },
-              }}
-            />
-            {/* <TextField
-              label="Availability"
-              type="text"
-              {...register("availability")}
-              error={!!errors.availability}
-              helperText={errors.availability?.message}
-              sx={{
-                "& label": { paddingLeft: (theme) => theme.spacing(1) },
-                "& input": { paddingLeft: (theme) => theme.spacing(2.5) },
-                "& fieldset": {
-                  paddingLeft: (theme) => theme.spacing(1.5),
-                  borderRadius: "10px",
-                },
-              }}
-            /> */}
-            <FormControl>
+
+            <FormControl fullWidth>
               <InputLabel id="available-id">Availability</InputLabel>
               <Select
                 value={availabilityDrop}
                 labelId="available-id"
                 label="Availability"
-                id="available-id-1"
+                onChange={(e: SelectChangeEvent) =>
+                  setAvailabilityDtop(e.target.value)
+                }
                 sx={{
-                  "& label": { paddingLeft: (theme) => theme.spacing(1) },
-                  "& input": { paddingLeft: (theme) => theme.spacing(2.5) },
-                  "& fieldset": {
-                    paddingLeft: (theme) => theme.spacing(1.0),
-                    borderRadius: "10px",
-                  },
-                }}
-                onChange={(e: SelectChangeEvent) => {
-                  // setRole(e.target.value);
-                  setAvailabilityDtop(e.target.value);
+                  borderRadius: "8px",
                 }}
               >
-                {/* <MenuItem value={"0 Hours"}>0 Hours</MenuItem> */}
                 <MenuItem value={"4 Hours"}>4 Hours</MenuItem>
                 <MenuItem value={"8 Hours"}>8 Hours</MenuItem>
                 <MenuItem value={"12 Hours"}>12 Hours</MenuItem>
@@ -268,53 +234,38 @@ const ProfileEdit = ({ props }: { props: any }) => {
                 <MenuItem value={"20 Hours"}>20 Hours</MenuItem>
               </Select>
             </FormControl>
+
             <TextField
               label="Gender"
               type="text"
+              fullWidth
               {...register("gender")}
-              error={!!errors.gender}
-              helperText={errors.gender?.message}
               sx={{
-                "& label": { paddingLeft: (theme) => theme.spacing(1) },
-                "& input": { paddingLeft: (theme) => theme.spacing(2.5) },
-                "& fieldset": {
-                  paddingLeft: (theme) => theme.spacing(1.5),
-                  borderRadius: "10px",
+                "& .MuiOutlinedInput-root": {
+                  borderRadius: "8px",
                 },
               }}
             />
-            {/* <TextField
-              label="Hours"
-              type="text"
-              {...register("hours")}
-              error={!!errors.hours}
-              helperText={errors.hours?.message}
-              sx={{
-                "& label": { paddingLeft: (theme) => theme.spacing(1) },
-                "& input": { paddingLeft: (theme) => theme.spacing(2.5) },
-                "& fieldset": {
-                  paddingLeft: (theme) => theme.spacing(1.5),
-                  borderRadius: "10px",
-                },
-              }}
-            /> */}
-            <Button
-              type="submit"
-              variant="contained"
-              color="primary"
-              style={{
-                background: "#FF5353",
-                borderRadius: "10px",
-                textTransform: "none",
-                fontSize: "16px",
-              }}
-            >
-              Save Profile
-            </Button>
-          </Stack>
-        </form>
-      </div>
-    </>
+          </div>
+
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            style={{
+              background: "#FF5353",
+              borderRadius: "8px",
+              textTransform: "none",
+              fontSize: "16px",
+              padding: "12px",
+              marginTop: "16px",
+            }}
+          >
+            Save Profile
+          </Button>
+        </Stack>
+      </form>
+    </div>
   );
 };
 
