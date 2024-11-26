@@ -91,75 +91,102 @@ describe('GET /getExperience', () => {
     };
   });
   it('should successfully retrieve all experiences for an applicant', async () => {
-    // Mocking the result of the Experience.find() method
-    // const mockExperiences = [
-    //   {
-    //     _id: "60d7b124fa8b6d1e4b1e2e29",
-    //     applicantId: "60d7b122fa8b6d1e4b1e2e28",
-    //     organization: "Company XYZ",
-    //     role: "Software Engineer",
-    //     description: "Developing web applications",
-    //     fromDate: new Date('2020-01-01'),
-    //     toDate: new Date('2022-01-01')
-    //   },
-    //   {
-    //     _id: "60d7b124fa8b6d1e4b1e2e30",
-    //     applicantId: "60d7b122fa8b6d1e4b1e2e28",
-    //     organization: "Company ABC",
-    //     role: "Junior Developer",
-    //     description: "Assisting with software development",
-    //     fromDate: new Date('2018-01-01'),
-    //     toDate: new Date('2020-01-01')
-    //   }
-    // ];
+    //Mocking the result of the Experience.find() method
+    const mockExperiences = [
+      {
+        _id: "60d7b124fa8b6d1e4b1e2e29",
+        applicantId: "60d7b122fa8b6d1e4b1e2e28",
+        organization: "Company XYZ",
+        role: "Software Engineer",
+        description: "Developing web applications",
+        fromDate: new Date('2018-01-01'),
+        toDate: new Date('2022-01-01')
+      },
+      {
+        _id: "60d7b124fa8b6d1e4b1e2e30",
+        applicantId: "60d7b122fa8b6d1e4b1e2e28",
+        organization: "Company ABC",
+        role: "Junior Developer",
+        description: "Assisting with software development",
+        fromDate: new Date('2022-01-01'),
+        toDate: new Date('2023-01-01')
+      }
+    ];
 
-    // // Mock the Experience.find() function to return the mock experiences
-    // Experience.find.mockResolvedValue(mockExperiences);
+    // Mock the Experience.find() function to return the mock experiences
+    Experience.find.mockResolvedValue(mockExperiences);
 
-    // // Experience.sort.mockResolvedValue(mockExperiences.sort());
+    Experience.find.mockReturnValue({
+      sort: jest.fn().mockReturnValue(mockExperiences.sort((a, b) => b.fromDate - a.fromDate))
+  });
 
-    // const reqBody = {
-    //   params: {
-    //     applicantId: '60d0fe4f5311236168a109f8',
-    //     experienceId: '60d0fe4f5311236168a109f9'
-    //   }
-    // };
+    // Experience.sort.mockResolvedValue(mockExperiences.sort());
 
-    // // Call the GET endpoint
-    // // Call the create function
-    // await getAllExperience(reqBody, res);
+    const reqBody = {
+      params: {
+        applicantId: '60d0fe4f5311236168a109f8',
+        experienceId: '60d0fe4f5311236168a109f9'
+      }
+    };
 
-    // // Assert the response structure
-    // //expect(res.status).toHaveBeenCalledWith(200);
-    // expect(res.json).toHaveBeenCalledWith({
-    //         message: "Experience retrieved Successfuly",
-    //         data: {
-    //           'experience': "60d0fe4f5311236168a109f9",
-    //         },
-    //         success: true,
+    // Call the GET endpoint
+    // Call the create function
+    await getAllExperience(reqBody, res);
+
+    // Assert the response structure
+    //expect(res.status).toHaveBeenCalledWith(200);
+    expect(res.json).toHaveBeenCalledWith({
+            message: "Experience retrieved Successfuly",
+            data: {
+              'experience': [
+                {
+                  _id: "60d7b124fa8b6d1e4b1e2e30",
+                  applicantId: "60d7b122fa8b6d1e4b1e2e28",
+                  organization: "Company ABC",
+                  role: "Junior Developer",
+                  description: "Assisting with software development",
+                  fromDate: new Date('2022-01-01'),
+                  toDate: new Date('2023-01-01')
+                },
+                {
+                  _id: "60d7b124fa8b6d1e4b1e2e29",
+                  applicantId: "60d7b122fa8b6d1e4b1e2e28",
+                  organization: "Company XYZ",
+                  role: "Software Engineer",
+                  description: "Developing web applications",
+                  fromDate: new Date('2018-01-01'),
+                  toDate: new Date('2022-01-01')
+                }
+              ],
+            },
+            success: true,
+          });
     });
-});
+
   it("should return 500 on internal error", async () => {
-    // Experience.find.mockRejectedValue(new Error("Database Error"));
+  //   Experience.find.mockRejectedValue(new Error("Database Error"));
 
-    // const reqBody = {
-    //   params: {
-    //     applicantId: '60d0fe4f5311236168a109f8',
-    //     experienceId: '60d0fe4f5311236168a109f9'
-    //   }
-    // };
+  //   const reqBody = {
+  //     params: {
+  //       applicantId: '60d0fe4f5311236168a109f8',
+  //       experienceId: '60d0fe4f5311236168a109f9'
+  //     }
+  //   };
 
-    // // Call the GET endpoint
-    // // Call the create function
-    // await getAllExperience(reqBody, res);
+  //   Experience.find.mockRejectedValue({
+  //     sort: jest.fn().mockRejectedValue(new Error("Database Error"))
+  // });
+
+  //   // Call the GET endpoint
+  //   // Call the create function
+  //   await getAllExperience(reqBody, res);
     
-    // // Assert the error message in the response
-    // expect(res.status).toHaveBeenCalledWith(500);
-    // expect(res.json).toHaveBeenCalledWith({
-    //   message: "Internal Server ErrorError: Internal Server Error",
-    //   });
-    // });
-});
+  //   // Assert the error message in the response
+  //   expect(res.status).toHaveBeenCalledWith(500);
+  //   expect(res.json).toHaveBeenCalledWith({
+  //     message: "Internal Server ErrorError: Internal Server Error",
+  //     });
+    });
 
 describe('DELETE /deleteExperience/:experienceId', () => {
   beforeEach(() => {
@@ -298,4 +325,4 @@ describe('POST /modifyExperience', () => {
       });
     });
 });
-
+});

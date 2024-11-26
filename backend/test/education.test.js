@@ -91,51 +91,56 @@ describe('GET /getEducation', () => {
   });
   it('should successfully retrieve all Educations for an applicant', async () => {
     // Mocking the result of the Education.find() method
-    // const mockEducations = [
-    //   {
-    //     _id: "60d7b124fa8b6d1e4b1e2e29",
-    //     applicantId: "60d7b122fa8b6d1e4b1e2e28",
-    //     organization: "Company XYZ",
-    //     role: "Software Engineer",
-    //     description: "Developing web applications",
-    //     fromDate: new Date('2020-01-01'),
-    //     toDate: new Date('2022-01-01')
-    //   },
-    //   {
-    //     _id: "60d7b124fa8b6d1e4b1e2e30",
-    //     applicantId: "60d7b122fa8b6d1e4b1e2e28",
-    //     organization: "Company ABC",
-    //     role: "Junior Developer",
-    //     description: "Assisting with software development",
-    //     fromDate: new Date('2018-01-01'),
-    //     toDate: new Date('2020-01-01')
-    //   }
-    // ];
+    const mockEducations = [
+      {
+        _id: "60d7b124fa8b6d1e4b1e2e29",
+        applicantId: "60d7b122fa8b6d1e4b1e2e28",
+        school_name: "WM",
+        field_of_study: "Software Engineer",
+        description: "Developing web applications",
+        fromDate: new Date('2020-01-01'),
+        toDate: new Date('2022-01-01')
+      }
+    ];
 
-    // // Mock the Education.find() function to return the mock Educations
-    // Education.find.mockResolvedValue(mockEducations);
+    // Mock the Education.find() function to return the mock Educations
+    Education.find.mockResolvedValue(mockEducations);
 
-    // // Education.sort.mockResolvedValue(mockEducations.sort());
+    Education.find.mockReturnValue({
+      sort: jest.fn().mockReturnValue(mockEducations.sort((a, b) => b.fromDate - a.fromDate))
+  });
 
-    // const reqBody = {
-    //   params: {
-    //     applicantId: '60d0fe4f5311236168a109f8',
-    //     EducationId: '60d0fe4f5311236168a109f9'
-    //   }
-    // };
+    // Education.sort.mockResolvedValue(mockEducations.sort());
 
-    // // Call the GET endpoint
-    // // Call the create function
-    // await getAllEducation(reqBody, res);
+    const reqBody = {
+      params: {
+        applicantId: '60d0fe4f5311236168a109f8',
+        EducationId: '60d0fe4f5311236168a109f9'
+      }
+    };
 
-    // // Assert the response structure
-    // //expect(res.status).toHaveBeenCalledWith(200);
-    // expect(res.json).toHaveBeenCalledWith({
-    //         message: "Education retrieved Successfuly",
-    //         data: {
-    //           'Education': "60d0fe4f5311236168a109f9",
-    //         },
-    //         success: true,
+    // Call the GET endpoint
+    // Call the create function
+    await getAllEducation(reqBody, res);
+
+    // Assert the response structure
+    //expect(res.status).toHaveBeenCalledWith(200);
+    expect(res.json).toHaveBeenCalledWith({
+            message: "Education retrieved Successfuly",
+            data: {
+              'education': [
+                {
+                  _id: "60d7b124fa8b6d1e4b1e2e29",
+                  applicantId: "60d7b122fa8b6d1e4b1e2e28",
+                  school_name: "WM",
+                  field_of_study: "Software Engineer",
+                  description: "Developing web applications",
+                  fromDate: new Date('2020-01-01'),
+                  toDate: new Date('2022-01-01')
+                }
+              ],
+            },
+            success: true,
     });
 });
   it("should return 500 on internal error", async () => {
@@ -297,4 +302,4 @@ describe('POST /modifyEducation', () => {
       });
     });
 });
-
+});

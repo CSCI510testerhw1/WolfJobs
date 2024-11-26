@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1732592888413" clover="3.2.0">
-  <project timestamp="1732592888413" name="All files">
-    <metrics statements="362" coveredstatements="155" conditionals="53" coveredconditionals="6" methods="38" coveredmethods="8" elements="453" coveredelements="169" complexity="0" loc="362" ncloc="362" packages="3" files="13" classes="13"/>
+<coverage generated="1732658404574" clover="3.2.0">
+  <project timestamp="1732658404574" name="All files">
+    <metrics statements="362" coveredstatements="170" conditionals="53" coveredconditionals="9" methods="38" coveredmethods="11" elements="453" coveredelements="190" complexity="0" loc="362" ncloc="362" packages="3" files="13" classes="13"/>
     <package name="controllers">
       <metrics statements="45" coveredstatements="20" conditionals="8" coveredconditionals="2" methods="6" coveredmethods="1"/>
       <file name="resume_controller.js" path="/workspaces/WolfJobs/backend/controllers/resume_controller.js">
@@ -54,78 +54,78 @@
       </file>
     </package>
     <package name="controllers.api.v1">
-      <metrics statements="268" coveredstatements="95" conditionals="45" coveredconditionals="4" methods="27" coveredmethods="7"/>
+      <metrics statements="268" coveredstatements="110" conditionals="45" coveredconditionals="7" methods="27" coveredmethods="10"/>
       <file name="profile_apis.js" path="/workspaces/WolfJobs/backend/controllers/api/v1/profile_apis.js">
-        <metrics statements="86" coveredstatements="52" conditionals="14" coveredconditionals="0" methods="9" coveredmethods="6"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="10" count="2" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="12" count="2" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
-        <line num="15" count="2" type="stmt"/>
+        <metrics statements="86" coveredstatements="67" conditionals="14" coveredconditionals="3" methods="9" coveredmethods="9"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
         <line num="16" count="2" type="stmt"/>
         <line num="19" count="2" type="stmt"/>
         <line num="20" count="2" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
         <line num="32" count="1" type="stmt"/>
-        <line num="38" count="2" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="42" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
-        <line num="45" count="0" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
         <line num="54" count="0" type="stmt"/>
-        <line num="60" count="2" type="stmt"/>
+        <line num="60" count="3" type="stmt"/>
         <line num="61" count="2" type="stmt"/>
         <line num="64" count="2" type="stmt"/>
         <line num="65" count="2" type="stmt"/>
         <line num="68" count="1" type="stmt"/>
         <line num="77" count="1" type="stmt"/>
-        <line num="84" count="2" type="stmt"/>
+        <line num="84" count="3" type="stmt"/>
         <line num="85" count="2" type="stmt"/>
         <line num="88" count="2" type="stmt"/>
         <line num="89" count="2" type="stmt"/>
         <line num="90" count="2" type="stmt"/>
         <line num="92" count="1" type="stmt"/>
         <line num="101" count="1" type="stmt"/>
-        <line num="108" count="2" type="stmt"/>
+        <line num="108" count="3" type="stmt"/>
         <line num="109" count="2" type="stmt"/>
         <line num="112" count="2" type="stmt"/>
         <line num="113" count="2" type="stmt"/>
         <line num="115" count="1" type="stmt"/>
         <line num="125" count="1" type="stmt"/>
-        <line num="131" count="2" type="stmt"/>
-        <line num="132" count="0" type="stmt"/>
-        <line num="135" count="0" type="stmt"/>
-        <line num="136" count="0" type="stmt"/>
-        <line num="138" count="0" type="stmt"/>
+        <line num="131" count="3" type="stmt"/>
+        <line num="132" count="1" type="stmt"/>
+        <line num="135" count="1" type="stmt"/>
+        <line num="136" count="1" type="stmt"/>
+        <line num="138" count="1" type="stmt"/>
         <line num="147" count="0" type="stmt"/>
-        <line num="153" count="2" type="stmt"/>
+        <line num="153" count="3" type="stmt"/>
         <line num="154" count="2" type="stmt"/>
         <line num="157" count="2" type="stmt"/>
         <line num="158" count="2" type="stmt"/>
         <line num="161" count="1" type="stmt"/>
         <line num="170" count="1" type="stmt"/>
-        <line num="177" count="2" type="stmt"/>
+        <line num="177" count="3" type="stmt"/>
         <line num="178" count="2" type="stmt"/>
         <line num="181" count="2" type="stmt"/>
         <line num="182" count="2" type="stmt"/>
         <line num="183" count="2" type="stmt"/>
         <line num="185" count="1" type="stmt"/>
         <line num="194" count="1" type="stmt"/>
-        <line num="200" count="2" type="stmt"/>
-        <line num="201" count="0" type="stmt"/>
-        <line num="204" count="0" type="stmt"/>
-        <line num="205" count="0" type="stmt"/>
-        <line num="206" count="0" type="stmt"/>
-        <line num="207" count="0" type="stmt"/>
-        <line num="208" count="0" type="cond" truecount="0" falsecount="4"/>
-        <line num="209" count="0" type="stmt"/>
+        <line num="200" count="3" type="stmt"/>
+        <line num="201" count="1" type="stmt"/>
+        <line num="204" count="1" type="stmt"/>
+        <line num="205" count="1" type="stmt"/>
+        <line num="206" count="1" type="stmt"/>
+        <line num="207" count="1" type="stmt"/>
+        <line num="208" count="1" type="cond" truecount="3" falsecount="1"/>
+        <line num="209" count="1" type="stmt"/>
         <line num="218" count="0" type="stmt"/>
         <line num="219" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="220" count="0" type="stmt"/>
@@ -348,19 +348,19 @@
       </file>
       <file name="education.js" path="/workspaces/WolfJobs/backend/models/education.js">
         <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="3" type="stmt"/>
-        <line num="3" count="3" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
         <line num="31" count="0" type="stmt"/>
         <line num="40" count="0" type="stmt"/>
-        <line num="51" count="3" type="stmt"/>
-        <line num="53" count="3" type="stmt"/>
+        <line num="51" count="4" type="stmt"/>
+        <line num="53" count="4" type="stmt"/>
       </file>
       <file name="email.js" path="/workspaces/WolfJobs/backend/models/email.js">
         <metrics statements="9" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="3" type="stmt"/>
-        <line num="2" count="3" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="13" count="3" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
@@ -369,12 +369,12 @@
       </file>
       <file name="experience.js" path="/workspaces/WolfJobs/backend/models/experience.js">
         <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="1" count="3" type="stmt"/>
-        <line num="3" count="3" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
         <line num="36" count="0" type="stmt"/>
-        <line num="47" count="3" type="stmt"/>
-        <line num="49" count="3" type="stmt"/>
+        <line num="47" count="4" type="stmt"/>
+        <line num="49" count="4" type="stmt"/>
       </file>
       <file name="food.js" path="/workspaces/WolfJobs/backend/models/food.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -406,10 +406,10 @@
       </file>
       <file name="user.js" path="/workspaces/WolfJobs/backend/models/user.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="4" type="stmt"/>
-        <line num="3" count="4" type="stmt"/>
-        <line num="72" count="4" type="stmt"/>
-        <line num="74" count="4" type="stmt"/>
+        <line num="1" count="5" type="stmt"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="72" count="5" type="stmt"/>
+        <line num="74" count="5" type="stmt"/>
       </file>
     </package>
   </project>
