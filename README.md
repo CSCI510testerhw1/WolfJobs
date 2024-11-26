@@ -33,13 +33,19 @@
 
 # New Features!
 
+- **New Profiles**: Updated profile page that allows applicants to store work-related information independent of their resumes.
+- **Experience and Education tabs**: New sections for applicants to enter and store their education and experience within their profiles.
+- **AI-backed Job recommendations**: Using the power of Artificial Intelligence, applicants can now get specialized recommendations on what jobs they would be best for based on their educational and work experience.
+- **Advanced Testing**: 16+ new test cases across both the frontend and backend, ensuring adherence to coding standards on all new features.
+- **Updated Codebase**: The removal of outdated and depreciated code ensures the software runs faster and cleaner than before.
+
+# Features from Previous Version:
+
 - **Multiple Applications**: Allow support for multiple applicants applying for the same job.
 - **Unique Resume Uploads**: Allow applicants to upload a unique resume for different job applications.
 - **Advanced Filter & Sorting**: Our revamped job sorting and filtering features allow you to easy organize job listings by affiliation, skills and skill matching percentage. The process of finding the perfect job for you becomes faster and more convienient!
 - **Email Service**: On getting selected/rejected to a job, the applicant will now get an email notification regarding their status.
 - **Skill Matching Percentage**: Before deciding on a job to apply, you can now take a look at the skill matching percentage to see how closely the job's required skills align with your abilities!
-
-# Features from Previous Version:
 
 - **New Screens Added!**
 - Branding, Colours and Typography
@@ -54,7 +60,7 @@
 
 # Presentation Video
 
-[![Watch the video](https://github.com/CSCI510testerhw1/WolfJobs/blob/master/GIFs/Thumbnail.png)](https://www.youtube.com/watch?v=EdFIcG3eckE)
+[![Watch the video](https://github.com/CSCI510testerhw1/WolfJobs/blob/master/GIFs/Thumbnail.png)](https://youtu.be/pkSHeD1p6oM)
 
 # About Us
 
@@ -78,6 +84,18 @@ At WolfJobs, it’s not just about work – it's about joining a vibrant pack wh
 
 # Application Preview With New Features:
 
+## Applicant Profiles
+
+Applicants can now upload fields such as education and work experience to their own profiles.
+
+![Applicant Profiles](https://github.com/CSCI510testerhw1/WolfJobs/blob/master/images/profile.png)
+
+# Job Recommendations
+
+Applicants can now get recommended ideal positions using AI-based analysis of their education and experience.
+
+![AI Recommend](https://github.com/CSCI510testerhw1/WolfJobs/blob/master/images/recommend.png)
+
 ## Applicant Login
 
 Applicants will be able to select the skills that they have from the skills database.
@@ -95,8 +113,6 @@ Managers will also be able to select the skills required for the job from the sk
 Applicants are able to view the percentage of how closely the job's required skills align with their skills
 
 ![Skill Percentage](https://github.com/CSCI510testerhw1/WolfJobs/blob/master/images/sort_skill_percentage.png)
-
-## Filtering & Sorting
 
 ### Filter by Affiliation
 
@@ -146,11 +162,11 @@ Applicants may upload a different resume for each job that they apply to
 
 **5. Matching based on Resume** – WolfJobs applicants will be able to parse their resume and WolfJobs will extract key skills from the resume and compare it with required job skills to give candidates job matching status.
 
-**6. Database Security and Hashing** – WolfJobs currently does not securely store the password and user information in the database. This data needs to be protected and hashed to ensure security.
+**6. Public Profiles** - Make profiles public to other applicants and employers
 
-**7. Wishlist**- Integrate a “wishlist” feature which allow applicants save job listings for later review.
+**7. Hiring Recommendations** -
+Enhance our AI-software to recommend ideal employees based on the job specifications laid out by employers.
 
-**8. Sort by distance** - Allow sorting job listings based on distance, view job locations on an interactive map, and apply a distance filter to limit results to their preferred commuting range.
 
 # Contributors
 
