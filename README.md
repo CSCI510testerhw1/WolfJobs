@@ -90,7 +90,7 @@ Applicants can now upload fields such as education and work experience to their 
 
 ![Applicant Profiles](https://github.com/CSCI510testerhw1/WolfJobs/blob/master/images/profile.png)
 
-# Job Recommendations
+## Job Recommendations
 
 Applicants can now get recommended ideal positions using AI-based analysis of their education and experience.
 
