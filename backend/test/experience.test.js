@@ -5,7 +5,7 @@ const { modifyExperience } = require("../controllers/api/v1/profile_apis"); // U
 const Education = require("../models/education");
 const Experience = require("../models/experience");
 const request = require('supertest');
-const mockingoose = require("mockingoose");
+// const mockingoose = require("mockingoose");
 const User = require("../models/user");
 
 require("dotenv").config();
@@ -116,9 +116,9 @@ describe('GET /getExperience', () => {
     // Mock the Experience.find() function to return the mock experiences
     Experience.find.mockResolvedValue(mockExperiences);
 
-    Experience.find.mockReturnValue({
-      sort: jest.fn().mockReturnValue(mockExperiences.sort((a, b) => b.fromDate - a.fromDate))
-  });
+  //   Experience.find.mockReturnValue({
+  //     sort: jest.fn().mockReturnValue(mockExperiences.sort((a, b) => b.fromDate - a.fromDate))
+  // });
 
     // Experience.sort.mockResolvedValue(mockExperiences.sort());
 
@@ -140,15 +140,6 @@ describe('GET /getExperience', () => {
             data: {
               'experience': [
                 {
-                  _id: "60d7b124fa8b6d1e4b1e2e30",
-                  applicantId: "60d7b122fa8b6d1e4b1e2e28",
-                  organization: "Company ABC",
-                  role: "Junior Developer",
-                  description: "Assisting with software development",
-                  fromDate: new Date('2022-01-01'),
-                  toDate: new Date('2023-01-01')
-                },
-                {
                   _id: "60d7b124fa8b6d1e4b1e2e29",
                   applicantId: "60d7b122fa8b6d1e4b1e2e28",
                   organization: "Company XYZ",
@@ -156,6 +147,15 @@ describe('GET /getExperience', () => {
                   description: "Developing web applications",
                   fromDate: new Date('2018-01-01'),
                   toDate: new Date('2022-01-01')
+                },
+                {
+                  _id: "60d7b124fa8b6d1e4b1e2e30",
+                  applicantId: "60d7b122fa8b6d1e4b1e2e28",
+                  organization: "Company ABC",
+                  role: "Junior Developer",
+                  description: "Assisting with software development",
+                  fromDate: new Date('2022-01-01'),
+                  toDate: new Date('2023-01-01')
                 }
               ],
             },
@@ -164,29 +164,25 @@ describe('GET /getExperience', () => {
     });
 
   it("should return 500 on internal error", async () => {
-  //   Experience.find.mockRejectedValue(new Error("Database Error"));
+    Experience.find.mockRejectedValue(new Error("Internal Server Error"));
 
-  //   const reqBody = {
-  //     params: {
-  //       applicantId: '60d0fe4f5311236168a109f8',
-  //       experienceId: '60d0fe4f5311236168a109f9'
-  //     }
-  //   };
+    const reqBody = {
+      params: {
+        applicantId: '60d0fe4f5311236168a109f8',
+        experienceId: '60d0fe4f5311236168a109f9'
+      }
+    };
 
-  //   Experience.find.mockRejectedValue({
-  //     sort: jest.fn().mockRejectedValue(new Error("Database Error"))
-  // });
-
-  //   // Call the GET endpoint
-  //   // Call the create function
-  //   await getAllExperience(reqBody, res);
+    // Call the GET endpoint
+    // Call the create function
+    await getAllExperience(reqBody, res);
     
-  //   // Assert the error message in the response
-  //   expect(res.status).toHaveBeenCalledWith(500);
-  //   expect(res.json).toHaveBeenCalledWith({
-  //     message: "Internal Server ErrorError: Internal Server Error",
-  //     });
+    // Assert the error message in the response
+    expect(res.status).toHaveBeenCalledWith(500);
+    expect(res.json).toHaveBeenCalledWith({
+      message: "Internal Server ErrorError: Internal Server Error",
     });
+  });
 
 describe('DELETE /deleteExperience/:experienceId', () => {
   beforeEach(() => {

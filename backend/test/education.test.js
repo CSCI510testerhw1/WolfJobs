@@ -5,7 +5,7 @@ const { modifyEducation } = require("../controllers/api/v1/profile_apis"); // Up
 const Education = require("../models/education");
 const Experience = require("../models/experience");
 const request = require('supertest');
-const mockingoose = require("mockingoose");
+// const mockingoose = require("mockingoose");
 const User = require("../models/user");
 
 require("dotenv").config();
@@ -106,9 +106,9 @@ describe('GET /getEducation', () => {
     // Mock the Education.find() function to return the mock Educations
     Education.find.mockResolvedValue(mockEducations);
 
-    Education.find.mockReturnValue({
-      sort: jest.fn().mockReturnValue(mockEducations.sort((a, b) => b.fromDate - a.fromDate))
-  });
+  //   Education.find.mockReturnValue({
+  //     sort: jest.fn().mockReturnValue(mockEducations.sort((a, b) => b.fromDate - a.fromDate))
+  // });
 
     // Education.sort.mockResolvedValue(mockEducations.sort());
 
@@ -144,26 +144,25 @@ describe('GET /getEducation', () => {
     });
 });
   it("should return 500 on internal error", async () => {
-    // Education.find.mockRejectedValue(new Error("Database Error"));
+    Education.find.mockRejectedValue(new Error("Internal Server Error"));
 
-    // const reqBody = {
-    //   params: {
-    //     applicantId: '60d0fe4f5311236168a109f8',
-    //     EducationId: '60d0fe4f5311236168a109f9'
-    //   }
-    // };
+    const reqBody = {
+      params: {
+        applicantId: '60d0fe4f5311236168a109f8',
+        EducationId: '60d0fe4f5311236168a109f9'
+      }
+    };
 
-    // // Call the GET endpoint
-    // // Call the create function
-    // await getAllEducation(reqBody, res);
+    // Call the GET endpoint
+    // Call the create function
+    await getAllEducation(reqBody, res);
     
-    // // Assert the error message in the response
-    // expect(res.status).toHaveBeenCalledWith(500);
-    // expect(res.json).toHaveBeenCalledWith({
-    //   message: "Internal Server ErrorError: Internal Server Error",
-    //   });
-    // });
-});
+    // Assert the error message in the response
+    expect(res.status).toHaveBeenCalledWith(500);
+    expect(res.json).toHaveBeenCalledWith({
+      message: "Internal Server ErrorError: Internal Server Error",
+      });
+    });
 
 describe('DELETE /deleteEducation/:educationId', () => {
   beforeEach(() => {

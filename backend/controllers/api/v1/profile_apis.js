@@ -40,7 +40,7 @@ module.exports.getAllExperience=async function(req,res){
 
 
         res.set("Access-Control-Allow-Origin", "*"); 
-        const result=await Experience.find({applicantId:req.params.applicantId}).sort({fromDate:-1});
+        const result=await Experience.find({applicantId:req.params.applicantId});
 
         return res.status(200).json({
             message: "Experience retrieved Successfuly",
@@ -133,7 +133,7 @@ module.exports.getAllEducation=async function(req,res){
 
 
       res.set("Access-Control-Allow-Origin", "*"); 
-      const result=await Education.find({applicantId:req.params.applicantId}).sort({fromDate:-1});
+      const result=await Education.find({applicantId:req.params.applicantId});
 
       return res.status(200).json({
           message: "Education retrieved Successfuly",
@@ -203,8 +203,8 @@ module.exports.recommendCareer=async function(req,res){
 
       res.set("Access-Control-Allow-Origin", "*"); 
       const openai_key=process.env.openai_key;
-      const allExperience=await Experience.find({applicantId:req.params.applicantId}).sort({fromDate:-1});
-      const allEducation=await Education.find({applicantId:req.params.applicantId}).sort({fromDate:-1});
+      const allExperience=await Experience.find({applicantId:req.params.applicantId});
+      const allEducation=await Education.find({applicantId:req.params.applicantId});
       if(allExperience.length==0 && allEducation.length==0){
           return res.status(200).json({
               message: "No experience or education records found to make a recommendation. Provide a detailed education and experience record for the best experience.",
