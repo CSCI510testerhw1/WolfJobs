@@ -132,6 +132,7 @@ const ExperienceModal = ({ experience, onClose, onSuccess }: ExperienceModalProp
                 onChange={handleChange}
                 required
                 InputLabelProps={{ shrink: true }}
+                inputProps={{ 'data-testid': 'fromDate' }}
                 sx={{
                   '& .MuiOutlinedInput-root': {
                     borderRadius: '8px',
@@ -145,6 +146,7 @@ const ExperienceModal = ({ experience, onClose, onSuccess }: ExperienceModalProp
                 value={formData.toDate}
                 onChange={handleChange}
                 InputLabelProps={{ shrink: true }}
+                inputProps={{ 'data-testid': 'toDate' }}
                 sx={{
                   '& .MuiOutlinedInput-root': {
                     borderRadius: '8px',
