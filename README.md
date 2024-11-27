@@ -13,7 +13,7 @@
 [![File Count](https://img.shields.io/github/directory-file-count/CSCI510testerhw1/WolfJobs)](https://github.com/CSCI510testerhw1/WolfJobs) 
 [![Language Count](https://img.shields.io/github/languages/count/CSCI510testerhw1/WolfJobs)](https://github.com/CSCI510testerhw1/WolfJobs)
 [![Top Language](https://img.shields.io/github/languages/top/CSCI510testerhw1/WolfJobs)](https://github.com/CSCI510testerhw1/WolfJobs)
-[![DOI](https://zenodo.org/badge/866310682.svg)](https://doi.org/10.5281/zenodo.14029522)
+[![DOI](https://zenodo.org/badge/887407723.svg)](https://doi.org/10.5281/zenodo.14226914)
 ![GitHub contributors](https://img.shields.io/github/contributors/CSCI510testerhw1/PopcornPicks) 
 ![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/CSCI510testerhw1/WolfJobs)
 [![codecov](https://codecov.io/gh/CSCI510testerhw1/WolfJobs/branch/master/graph/badge.svg?token=49BL2NFTCZ)](https://codecov.io/gh/CSCI510testerhw1/WolfJobs)
