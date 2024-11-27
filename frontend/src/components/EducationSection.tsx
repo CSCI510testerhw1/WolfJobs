@@ -97,6 +97,7 @@ const EducationSection = () => {
                   <FaEdit />
                 </button>
                 <button
+                  aria-label="Delete education"
                   onClick={() => handleDelete(edu._id)}
                   className="text-gray-500 hover:text-red-600"
                 >
